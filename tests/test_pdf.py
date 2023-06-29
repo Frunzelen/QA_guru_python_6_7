@@ -6,7 +6,7 @@ import os
 
 # Читаем файл pdf
 def test_pdf():
-    reader = PdfReader(os.path.abspath("../resources/docs-pytest-org-en-latest.pdf"))
+    reader = PdfReader(os.path.abspath(os.path.join(os.path.dirname(__file__), '../resources/docs-pytest-org-en-latest.pdf')))
     number_of_pages = len(reader.pages)
     page = reader.pages[0]
     text = page.extract_text()

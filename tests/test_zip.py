@@ -26,5 +26,3 @@ def test_created_zip_file(tmp_dir_manager):
     with zipfile.ZipFile(path_zip_file) as zip_archive:
         assert len(path_resources_files) == len(zip_archive.infolist())
 
-    for file in path_resources_files:
-            info = zip_archive.getinfo(file)
